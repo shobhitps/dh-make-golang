@@ -13,6 +13,7 @@ go:
 
 arch:
   - amd64
+  - arm64
   - arm64-graviton2
   - ppc64le
 
@@ -22,6 +23,8 @@ jobs:
   fast_finish: true
   exclude:
     - arch: arm64-graviton2
+      go: 1.11.x
+    - arch: arm64
       go: 1.11.x
 
 cache:
