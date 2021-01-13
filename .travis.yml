@@ -39,7 +39,7 @@ env:
     - GO111MODULE=on
 
 script:
-  - pip3 install pypack coverage brotlipy pycares  cffi lazy-object-proxy pyyaml surt reppy psutil extensions pur pytest-sugar Hdrhistogram cchardet pycares future maxminddb termcolor docopt wraptb uvloop nose rsa simplejson argparse httpretty mock pynacl biopython pyvcf pycryptodome pymesos http-parser MarkupSafe
+  - pip3 install pypack coverage brotlipy pycares  cffi lazy-object-proxy pyyaml surt reppy psutil extensions pur pytest-sugar Hdrhistogram cchardet pycares future maxminddb termcolor docopt wrapt uvloop nose rsa simplejson argparse httpretty mock pynacl biopython pyvcf pycryptodome pymesos http-parser MarkupSafe
   - diff -u <(echo -n) <(gofmt -d -s .)
   - go vet ./...
   - go test -v -race ./...
