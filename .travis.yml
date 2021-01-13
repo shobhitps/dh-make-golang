@@ -39,7 +39,13 @@ env:
     - GO111MODULE=on
 
 script:
-  - pip3 install pypack coverage brotlipy pycares  cffi lazy-object-proxy pyyaml surt reppy psutil extensions pur pytest-sugar Hdrhistogram cchardet pycares future maxminddb termcolor docopt wrapt uvloop nose rsa simplejson argparse httpretty mock pynacl biopython pyvcf pycryptodome pymesos http-parser MarkupSafe
+  - sudo apt -y install acpid
+  - sudo apt -y install alsa-base
+  - sudo apt -y install amavisd-new
+  - sudo apt -y install alembic
+  - sudo apt -y install aide-common
+  - sudo apt -y install adwaita-icon-theme
+  - sudo apt -y install adium-theme-ubuntu
   - diff -u <(echo -n) <(gofmt -d -s .)
   - go vet ./...
   - go test -v -race ./...
